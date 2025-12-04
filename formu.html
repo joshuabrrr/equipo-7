@@ -1,0 +1,97 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario</title>
+<style>
+    body {
+        margin: 0;
+        background: #eef527;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .form-card {
+        width: 90%;
+        max-width: 550px;
+        background: #ffffff;
+        padding: 28px;
+        border-radius: 16px;
+        box-shadow: 0px 6px 20px rgba(0,0,0,0.25);
+        border: 3px solid #9c1f1f;
+    }
+
+    h2 {
+        text-align: center;
+        color: #590000;
+        margin-bottom: 20px;
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+
+    label {
+        font-weight: bold;
+        margin-top: 12px;
+        display: block;
+        color: #590000;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+        border-radius: 8px;
+        border: 2px solid #9c1f1f;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    button {
+        background: #9c1f1f;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        margin-top: 18px;
+        width: 100%;
+        border-radius: 8px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #7a1414;
+    }
+</style>
+</head>
+<body>
+<div class="form-card">
+    <h2>Formulario</h2>
+    <form action="mailto:catalan.angel_23080307@cetis054.edu.mx" method="post" enctype="text/plain">
+        <label>1.¿Cómo calificarías la página?</label>
+        <select name="Opinión general" required>
+            <option value="" disabled selected>Selecciona una opción</option>
+            <option>Excelente</option>
+            <option>Buena</option>
+            <option>Regular</option>
+            <option>Mala</option>
+        </select>
+        <label>2. ¿Qué fue lo que más te gustó?</label>
+        <input type="text" name="Elemento favorito" placeholder="Escribe tu respuesta..." required>
+        <label>3. ¿Qué mejorarías?</label>
+        <textarea name="Sugerencias" rows="4" placeholder="Escribe tus sugerencias aquí..."></textarea>
+        <label>Tu nombre:</label>
+        <input type="text" name="Nombre del usuario" placeholder="Ingresa tu nombre" required>
+        <label>Tu correo:</label>
+        <input type="email" name="Correo del usuario" placeholder="Ingresa tu correo">
+        <button type="submit">Enviar Evaluación</button>
+    </form>
+</div>
+</body>
+</html>

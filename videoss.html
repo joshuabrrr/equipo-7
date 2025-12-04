@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>Utilizando elementos multimedia</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background-color: #8C8030;
+    }
+
+    header {
+        background-color: #8C8030;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        background-color: #8C8030;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        font-size: 20px;
+        border-bottom: 3px solid #8C8030;
+    }
+
+    nav a {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    #videoContainer {
+        background-color: #FFFFFF;
+        height: calc(100vh - 190px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        overflow: hidden;
+        text-align: center;
+        font-weight: 500;
+        font-size: 22px;
+    }
+
+    a.enlace {
+        font-size: 26px;
+        color: #1a3d8f;
+        font-weight: 600;
+    }
+
+    footer {
+        background-color: #8C8030;
+        color: white;
+        text-align: center;
+        padding: 18px;
+        font-size: 22px;
+        font-weight: 600;
+    }
+</style>
+
+<script>
+function cargarLink(url) {
+    document.getElementById("videoContainer").innerHTML = `
+        <a class="enlace" href="${url}" target="_blank">${url}</a>
+    `;
+}
+
+function limpiar() {
+    document.getElementById("videoContainer").innerHTML = `
+        <h2 style="color:#8a1d1d; font-weight:600;">
+            AQUÍ SE DESPLEGARÁ EL CONTENIDO DE LA PÁGINA
+        </h2>
+    `;
+}
+</script>
+
+</head>
+<body>
+<header>
+    UTILIZANDO ELEMENTOS MULTIMEDIA
+</header>
+
+<nav>
+    <a onclick="cargarLink('https://youtu.be/AtuI_jJP2qc?si=-ktMZTSE8F421ZGn')">Mostrar enlace 1</a>
+    <a onclick="cargarLink('https://youtu.be/hBLDHswTJ8I?si=ysvTEimoyCI3N9Is')">Mostrar enlace 2</a>
+    <a onclick="cargarLink('https://youtu.be/_CYMQDoqWWI?si=PFS6lFFb7OnohePo')">Mostrar enlace 3</a>
+    <a onclick="limpiar()">Limpiar página</a>
+</nav>
+
+<div id="videoContainer">
+    AQUÍ SE DESPLEGARÁ EL CONTENIDO DE LA PÁGINA
+</div>
+
+</body>
+</html>
